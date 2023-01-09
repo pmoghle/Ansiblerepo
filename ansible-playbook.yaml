@@ -1,7 +1,5 @@
 ---
 - hosts: localhost
-  connection: local
-  gather_facts: False
   tasks:
   - name: create S3 bucket
     s3_bucket:
@@ -21,11 +19,6 @@
                   's3:PutObject',
                   's3:PutObjectAcl'
               ]
-              Resource: [
-                '{{item.value}}/*',
-                '{{item.value}}'
-              ]
-      
       state: present
       region: ${params.AWS_REGION}
       versioning: no
