@@ -1,5 +1,7 @@
 ---
 - hosts: localhost
+  connection: local
+  gather_facts: False
   tasks:
   - name: create S3 bucket
     s3_bucket:
@@ -7,6 +9,35 @@
      # aws_access_key: xxxxxxx
       #aws_secret_key: xxxxxxx
       policy: 
+            "Version": "2012-10-17",
+            "Statement": [
+       {
+          "Sid": "statement1",
+          "Effect": "Allow",
+          "Principal": {
+             "AWS": "arn:aws:iam::821359796262:user/${params.IAM_USER}"
+          },
+          "Action": [
+             "s3:GetBucketLocation",
+             "s3:ListBucket"
+          ],
+          "Resource": [
+             "arn:aws:s3:::${params.BUCKET_NAME}/${params.IAM_USER}"
+          ]
+       },
+       {
+          "Sid": "statement2",
+          "Effect": "Allow",
+          "Principal": {
+             "AWS": "arn:aws:iam::821359796262:user/${params.IAM_USER}"
+          },
+          "Action": [
+              "s3:GetObject"
+          ],
+          "Resource": [
+             "arn:aws:s3:::${params.BUCKET_NAME}/${params.IAM_USER}"
+          ]
+      
       state: present
       region: ${params.AWS_REGION}
       versioning: no
