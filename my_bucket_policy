@@ -5,7 +5,7 @@
           "Sid": "statement1",
           "Effect": "Allow",
           "Principal": {
-             "AWS": "arn:aws:iam::AccountA-ID:user/pooja"
+             "AWS": "arn:aws:iam::821359796262:user/pooja"
           },
           "Action": [
              "s3:GetBucketLocation",
@@ -19,7 +19,7 @@
           "Sid": "statement2",
           "Effect": "Allow",
           "Principal": {
-             "AWS": "arn:aws:iam::AccountA-ID:user/pooja"
+             "AWS": "arn:aws:iam::821359796262:user/pooja"
           },
           "Action": [
               "s3:GetObject"
