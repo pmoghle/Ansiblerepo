@@ -20,6 +20,6 @@
                   's3:PutObjectAcl'
               ]
       state: present
-      region: ${params.AWS_REGION}
+      region: ap-south-1
       versioning: no
       
