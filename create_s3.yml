@@ -1,12 +1,15 @@
 ---
 - hosts: localhost
+  connection: local 
   tasks:
   - name: create S3 bucket
     s3_bucket:
-      name: ${params.BUCKET_NAME}
-    #  aws_access_key: xxxxxxx
-     # aws_secret_key: xxxxxxx
-      policy: "{{ lookup( 'file','my_bucket_policy.json' )}}"
+      name: bucket
+     # aws_access_key: AKIAZOGSWYVYDJ7ZRJKV
+     # aws_secret_key: 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
       state: present
-      region: ${params.AWS_REGION}
+      region: ap-south-1
       versioning: no
+      tags:
+         name: myansiblelatestbucket
+         type: example
