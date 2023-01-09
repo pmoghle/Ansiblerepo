@@ -4,12 +4,10 @@
   tasks:
   - name: create S3 bucket
     s3_bucket:
-      name: bucket
-     # aws_access_key: AKIAZOGSWYVYDJ7ZRJKV
-     # aws_secret_key: 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
+      name: ${params.BUCKET_NAME}
       state: present
       region: ap-south-1
       versioning: no
       tags:
-         name: myansiblelatestbucket
+         name: ${params.BUCKET_NAME}
          type: example
