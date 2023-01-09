@@ -2,7 +2,6 @@
 - hosts: localhost
   tasks:
   - name: create S3 bucket
-     become:true
     s3_bucket:
       name: ${params.BUCKET_NAME}
      # aws_access_key: xxxxxxx
