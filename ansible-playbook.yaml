@@ -6,7 +6,7 @@
       name: ${params.BUCKET_NAME}
      # aws_access_key: xxxxxxx
       #aws_secret_key: xxxxxxx
-      policy: "{{ lookup( 'file','my_bucket_policy.json' )}}"
+      policy: 
       state: present
       region: ${params.AWS_REGION}
       versioning: no
