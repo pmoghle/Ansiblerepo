@@ -3,7 +3,7 @@
   tasks:
   - name: create S3 bucket
     s3_bucket:
-      name: ${params.BUCKET_NAME}
+      name: poojabucket
      # aws_access_key: xxxxxxx
       #aws_secret_key: xxxxxxx
       policy:
