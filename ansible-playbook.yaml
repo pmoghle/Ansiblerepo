@@ -5,7 +5,7 @@
   tasks:
   - name: create S3 bucket
     s3_bucket:
-      name: poojabucket-3
+      name: asdf3bucket
       aws_access_key: AKIA36PG34ATBCKXIIEO
       aws_secret_key: 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
       state: present
@@ -15,7 +15,7 @@
       #requester_pays: true
       versioning: no
       tags:
-         name: poojabucket-3
+         name: asdf3bucket
          type: example
       
       
