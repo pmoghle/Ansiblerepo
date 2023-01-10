@@ -12,7 +12,7 @@
              "s3:ListBucket"
           ],
           "Resource": [
-             "arn:aws:s3:::poojabucket-3/msuser"
+             "arn:aws:s3:::asdf3bucket/msuser"
           ]
        },
        {
@@ -25,7 +25,7 @@
               "s3:GetObject"
           ],
           "Resource": [
-             "arn:aws:s3:::poojabucket-3/msuser"
+             "arn:aws:s3:::asdf3bucket/msuser"
           ]
        }
     ]
