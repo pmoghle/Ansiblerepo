@@ -5,11 +5,11 @@
   - name: create S3 bucket
     s3_bucket:
       name: poojabucket-3
+      state: present
+      region: ap-south-1
       permission: private # acl: public-read
       policy: "{{ lookup('file','my_bucket_policy.json') }}"
       requester_pays: true
-      state: present
-      region: ap-south-1
       versioning: no
       
       
