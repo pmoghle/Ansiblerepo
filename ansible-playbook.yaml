@@ -1,11 +1,10 @@
 ---
 - hosts: localhost
+  connection: local
   tasks:
   - name: create S3 bucket
     s3_bucket:
       name: poojabucket-3
-     # aws_access_key: xxxxxxx
-      #aws_secret_key: xxxxxxx
       permission: private # acl: public-read
       policy: "{{ lookup('file','my_bucket_policy.json') }}"
       requester_pays: true
