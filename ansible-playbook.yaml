@@ -7,28 +7,28 @@
      # aws_access_key: xxxxxxx
       #aws_secret_key: xxxxxxx
       policy:
-        "Version":"2012-10-17",
-        "Statement":[
+        Version:"2012-10-17",
+        Statement:[
            {
-              "Effect":"Allow",
-              "Action": "s3:ListAllMyBuckets",
-              "Resource":"*"
-           },
-           {
-              "Effect":"Allow",
-              "Action":["s3:ListBucket","s3:GetBucketLocation"],
-              "Resource":"arn:aws:s3:::poojabucket-2"
-           },
-           {
-              "Effect":"Allow",
-              "Action":[
+            Effect:"Allow",
+            Action: "s3:ListAllMyBuckets",
+            Resource:"*"
+            },
+            {
+            Effect:"Allow",
+            Action:["s3:ListBucket","s3:GetBucketLocation"],
+            Resource:"arn:aws:s3:::poojabucket-2"
+               },
+            {
+            Effect:"Allow",
+            Action:[
                  "s3:PutObject",
                  "s3:PutObjectAcl",
                  "s3:GetObject",
                  "s3:GetObjectAcl",
                  "s3:DeleteObject"
                ],
-               "Resource":"arn:aws:s3:::poojabucket-2/pooja"
+            Resource":"arn:aws:s3:::poojabucket-2/pooja"
             }
          ]
       state: present
