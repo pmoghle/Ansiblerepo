@@ -5,27 +5,27 @@
           "Sid": "statement1",
           "Effect": "Allow",
           "Principal": {
-             "AWS": "arn:aws:iam::821359796262:user/${params.IAM_USER}"
+             "AWS": "arn:aws:iam::821359796262:user/pooja"
           },
           "Action": [
              "s3:GetBucketLocation",
              "s3:ListBucket"
           ],
           "Resource": [
-             "arn:aws:s3:::${params.BUCKET_NAME}/${params.IAM_USER}"
+             "arn:aws:s3:::poojabucket-3/pooja"
           ]
        },
        {
           "Sid": "statement2",
           "Effect": "Allow",
           "Principal": {
-             "AWS": "arn:aws:iam::821359796262:user/${params.IAM_USER}"
+             "AWS": "arn:aws:iam::821359796262:user/pooja"
           },
           "Action": [
               "s3:GetObject"
           ],
           "Resource": [
-             "arn:aws:s3:::${params.BUCKET_NAME}/${params.IAM_USER}"
+             "arn:aws:s3:::poojabucket-3/pooja"
           ]
        }
     ]
