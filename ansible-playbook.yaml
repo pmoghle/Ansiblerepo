@@ -4,6 +4,8 @@
   - name: create S3 bucket
     s3_bucket:
       name: poojabucket-2
+      permission: private # acl: public-read
+      policy: "{{ lookup('file','policy.json') }}"
      # aws_access_key: xxxxxxx
       #aws_secret_key: xxxxxxx
       policy:
