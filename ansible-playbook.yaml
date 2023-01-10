@@ -10,7 +10,7 @@
       region: ap-south-1
       acl: private # acl: public-read
       policy: "{{ lookup('file','my_bucket_policy.json') }}"
-      requester_pays: true
+      #requester_pays: true
       versioning: no
       tags:
          name: poojabucket-3
