@@ -4,7 +4,7 @@
   #gather_facts: False
   tasks:
   - name: create S3 bucket
-    s3_bucket:
+    aws_s3_bucket:
       name: poojabucket-3
       state: present
       region: ap-south-1
