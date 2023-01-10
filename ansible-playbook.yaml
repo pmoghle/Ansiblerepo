@@ -3,7 +3,7 @@
   tasks:
   - name: create S3 bucket
     s3_bucket:
-      name: poojabucket-2
+      name: poojabucket-3
      # aws_access_key: xxxxxxx
       #aws_secret_key: xxxxxxx
       permission: private # acl: public-read
